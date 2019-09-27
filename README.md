@@ -1,19 +1,29 @@
-# App
+Phoenix 1.4 Web Sockets Spike
+====
 
 To start your Phoenix server:
 
-  * Install dependencies with `mix deps.get`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+```
+$ iex -S mix phx.server
+iex(1)>
+```
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Visit localhost:4000 and view the Javascript console
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+To start the timer:
 
-## Learn more
+```
+iex(1)> App.Timer.start_link()
+[warn] App timer server started
+```
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+You should see the following output in the Javascript console:
+
+```
+Joined successfully
+Object {  }
+socket.js:63:11
+The timer is:  30 socket.js:68:11
+The timer is:  29 socket.js:68:11
+The timer is:  28
+```
